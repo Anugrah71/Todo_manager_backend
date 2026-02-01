@@ -15,7 +15,7 @@ with controlled transitions, listing with filtering, and basic metrics.
  - total tasks
  - count per status
  - average completion time
-- MongoDB presistance
+- MongoDB persistence
 
 ---
 
@@ -133,3 +133,4 @@ I personally implemented the full project, including:
 - Implementing average completion time
 - verifying data directly in MongoDB
 - Testing all `API Endpoints` using `Postman`
+
