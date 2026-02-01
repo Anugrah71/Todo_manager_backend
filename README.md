@@ -53,7 +53,10 @@ http://localhost:5000
 ---
 ## API Endpoints
 ### Create Task
-`POST` ```bash localhost:5000/createtask```
+`POST` 
+```bash
+localhost:5000/createtask
+```
 Body:
 ```json
 {
@@ -62,7 +65,10 @@ Body:
 }
 ```
 ### Update Task Status
-`PATCH` ```bash localhost:5000/updatestatus```
+`PATCH`
+```bash 
+localhost:5000/updatestatus
+```
 Body:
 ```json
 {
@@ -72,13 +78,26 @@ Body:
 
 ```
 ### List Tasks
-`GET` ```bash http://localhost:5000/tasks?status=todo```
-`GET` ```bash http://localhost:5000/tasks?status=in_progress```
-`GET` ```bash http://localhost:5000/tasks?status=done```
+#### `GET` 
+Get Todo tasks
+```bash
+http://localhost:5000/tasks?status=todo 
+```
+Get in_progress tasks
+```bash 
+http://localhost:5000/tasks?status=in_progress
+```
+Get done tasks
+```bash 
+http://localhost:5000/tasks?status=done
+```
 Returns tasks filtered by status and sorted by newest first.
 
 ### Metrics
-`GET` ```bash localhost:5000/metrics```
+`GET` 
+```bash 
+localhost:5000/metrics
+```
 Return: 
   - total tasks
   - count per status
