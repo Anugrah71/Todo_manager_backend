@@ -100,13 +100,9 @@ exports.metrics = async (req, res) => {
           break;
         case "done":
           done++;
-
-          //calculate time difference only for completed tasks
-          if (task.completed_at) {
-            totalCompletionTime +=
-              new Date(task.completed_at) - new Date(task.created_at);
-            completedCount++;
-          }
+          totalCompletionTime +=
+            new Date(task.completed_at) - new Date(task.created_at);
+          completedCount++;
           break;
       }
     });
