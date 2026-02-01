@@ -102,7 +102,7 @@ Return:
   - total tasks
   - count per status
   - average completion time
-Output:
+#### Output:
 ```json
 {
     "total": 6,
@@ -145,6 +145,7 @@ I personally implemented the full project, including:
 - Implementing average completion time
 - verifying data directly in MongoDB
 - Testing all `API Endpoints` using `Postman`
+
 
 
 
