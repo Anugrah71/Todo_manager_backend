@@ -26,7 +26,7 @@ exports.updateStatus = async (req, res) => {
   try {
     const { todoId, newStatus } = req.body;
     //validate input
-    if (!todoId) return res.status(400).json({ error: "Todo id much given" });
+    if (!todoId || !newStatus) return res.status(400).json({ error: "todoId and newStatus are required" });
     //find task by id
     const todo = await Task.findById(todoId);
     if (!todo) return res.status(404).json({ error: "Todo not found" });
@@ -50,7 +50,7 @@ exports.updateStatus = async (req, res) => {
     if (newStatus === "done") {
       todo.completed_at = new Date();
     }
-    //save chagnes
+    //save changes
     await todo.save();
 
     res.json(todo);
