@@ -102,6 +102,18 @@ Return:
   - total tasks
   - count per status
   - average completion time
+Output:
+```json
+{
+    "total": 6,
+    "statusCounts": {
+        "todo": 2,
+        "in_progress": 0,
+        "done": 4
+    },
+    "averageCompletionTime": "3.7910277777777774 minutes"
+}
+```
 
 ---
 ## Assumptions & Design Decisions
@@ -133,4 +145,5 @@ I personally implemented the full project, including:
 - Implementing average completion time
 - verifying data directly in MongoDB
 - Testing all `API Endpoints` using `Postman`
+
 
