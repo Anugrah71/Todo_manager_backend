@@ -66,7 +66,7 @@ exports.listTasks = async (req, res) => {
       return res.status(400).json({ error: "Status is not provided" });
 
     //remove any whitespaces
-    clearStatus = status.trim();
+    const clearStatus = status.trim();
 
     //sort the todo based on filter and newest first
     const tasks = await Task.find({ status: clearStatus }).sort({
@@ -89,7 +89,7 @@ exports.metrics = async (req, res) => {
     let totalCompletionTime = 0;
     let completedCount = 0;
 
-    //count tasks and calcuate completion time
+    //count tasks and calculate completion time
     tasks.forEach((task) => {
       switch (task.status) {
         case "todo":
